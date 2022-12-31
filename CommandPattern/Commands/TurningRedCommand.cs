@@ -1,11 +1,13 @@
-﻿public class TurningRedCommand : ClearNeedCommand
+﻿public class TurningRedCommand : ICommand
 {
-    public override string GetTitle() => nameof(TurningRedCommand);
+    public string CommandShortcut => "R";
+    public string CommandFullName => "TRED";
 
-    public override void Execute()
+    public string GetTitle() => nameof(TurningRedCommand);
+
+    public void Execute()
     {
         Console.BackgroundColor = ConsoleColor.Red;
-        ClearCommand.Execute();
     }
 }
 

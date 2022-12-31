@@ -50,4 +50,3 @@ ConsoleCommand ReadConsole()
     History.history.AppendLine(consoleCommand.GetTitle());
     return consoleCommand;
 }
-

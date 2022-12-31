@@ -1,11 +1,12 @@
 ﻿using System.Text;
 
-public class ClearHistoryCommand : ClearNeedCommand
+public class ClearHistoryCommand : ICommand
 {
-    public override string GetTitle() => nameof(ClearHistoryCommand);
-    public override void Execute()
+    public string CommandShortcut => "L";
+    public string CommandFullName => "CLEAR";
+    public string GetTitle() => nameof(ClearHistoryCommand);
+    public void Execute()
     {
-        ClearCommand.Execute();
         History.history = new StringBuilder();
     }
 }

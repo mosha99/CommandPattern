@@ -1,5 +1,7 @@
 ﻿public class ExitCommand : ICommand
 {
+    public string CommandShortcut => "E";
+    public string CommandFullName => "EXIT";
 
     public void Execute()
     {

@@ -1,11 +1,13 @@
-﻿public class TurningBlackCommand : ClearNeedCommand
+﻿public class TurningBlackCommand : ICommand
 {
-    public override string GetTitle() => nameof(TurningBlackCommand);
+    public string CommandShortcut => "B";
+    public string CommandFullName => "TBLACK";
 
-    public override void Execute()
+    public string GetTitle() => nameof(TurningBlackCommand);
+
+    public void Execute()
     {
         Console.BackgroundColor = ConsoleColor.Black;
-        ClearCommand.Execute();
     }
 }
 
